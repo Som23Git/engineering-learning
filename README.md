@@ -1,34 +1,37 @@
 # Engineering Learning
 
-This repo contains my daily engineering learning notes.
+This repo is my daily engineering learning system.
 
-The notes are generated automatically using GitHub Actions and the OpenAI API.
+It uses:
 
-## Focus Areas
+- GitHub Actions for daily automation
+- OpenAI API for lesson generation
+- MkDocs Material for the learning website
+- GitHub Pages for publishing
+- A feedback loop from previous lessons to improve future lessons
 
-- Backend engineering
-- APIs
-- Distributed systems
-- Databases
-- Caching
-- Queues
-- Docker
-- Kubernetes
-- CI/CD
-- Observability
-- System design
-- Platform engineering
+## How it works
 
-## Daily Notes
+Every day:
 
-Notes are stored in the `daily/` directory.
+1. GitHub Actions runs on a schedule.
+2. The Python script reads `roadmap.json`.
+3. It checks the previous day's feedback.
+4. It asks OpenAI to generate today's lesson.
+5. It saves the lesson under `docs/daily/`.
+6. It updates docs index pages.
+7. It commits the new lesson.
+8. It deploys the MkDocs site to GitHub Pages.
 
-## Human-in-the-loop
+## Human feedback loop
 
-Each note includes sections for:
+Each daily lesson includes:
 
-- My Understanding
-- Mistakes I Made
-- Questions I Still Have
+- Learning Feedback
+- Rating
+- What was clear?
+- What was confusing?
+- What should be explained again?
+- What should tomorrow include?
 
-These sections are intentionally left blank so I can add my own learning after reading the lesson.
+The next run reads this feedback and uses it to improve the next lesson.

@@ -1,4 +1,4 @@
-name: Daily Engineering Lesson
+name: Daily Engineering Learning
 
 on:
   schedule:
@@ -7,6 +7,12 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "daily-learning-pages"
+  cancel-in-progress: false
 
 jobs:
   generate-lesson:
@@ -15,25 +21,74 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install openai
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
 
-      - name: Generate daily note
+      - name: Generate daily lesson
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-5.5
         run: python scripts/generate_daily_note.py
 
-      - name: Commit and push changes
+      - name: Update docs indexes
+        run: python scripts/update_docs_indexes.py
+
+      - name: Commit generated lesson
         run: |
           git config user.name "daily-learning-bot"
           git config user.email "daily-learning-bot@users.noreply.github.com"
-          git add daily/
-          git commit -m "Add daily engineering lesson" || echo "No changes to commit"
-          git push
+
+          git add docs/ roadmap.json
+
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "Add daily engineering lesson"
+            git push
+          fi
+
+  deploy-pages:
+    needs: generate-lesson
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository after generated commit
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Pull latest changes
+        run: git pull origin main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build MkDocs site
+        run: mkdocs build --strict
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

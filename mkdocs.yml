@@ -1,0 +1,51 @@
+site_name: Engineering Learning
+site_description: Daily engineering learning notes generated with GitHub Actions and OpenAI
+site_author: Som
+repo_url: git clone https://github.com/Som23Git/engineering-learning.git 
+repo_name: Som23Git/engineering-learning
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
+nav:
+  - Home: index.md
+  - Roadmap: roadmap.md
+  - Daily Lessons:
+      - Overview: daily/index.md
+  - Weekly Reviews:
+      - Overview: weekly-reviews/index.md
+  - Projects:
+      - Overview: projects/index.md

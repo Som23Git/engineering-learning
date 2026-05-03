@@ -1,72 +1,494 @@
 [
     {
       "day": 1,
-      "topic": "HTTP",
-      "category": "Backend Fundamentals"
+      "phase": "Phase 1 — Backend Foundations",
+      "topic": "HTTP Fundamentals",
+      "category": "Backend Fundamentals",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand how clients and servers communicate using HTTP requests and responses.",
+      "official_docs": [
+        {
+          "title": "MDN — Overview of HTTP",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"
+        },
+        {
+          "title": "MDN — HTTP request methods",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+        },
+        {
+          "title": "MDN — HTTP response status codes",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "MDN — HTTP guides",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides"
+        }
+      ],
+      "hands_on": "Use curl to send GET, POST, PUT, and DELETE requests to a sample API and record the response codes.",
+      "expected_outcome": "Explain HTTP methods, headers, request body, response body, and status codes."
     },
     {
       "day": 2,
-      "topic": "REST APIs",
-      "category": "APIs"
+      "phase": "Phase 1 — Backend Foundations",
+      "topic": "REST API Design",
+      "category": "APIs",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand REST-style resource design and how APIs expose application functionality.",
+      "official_docs": [
+        {
+          "title": "MDN — HTTP request methods",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+        },
+        {
+          "title": "MDN — HTTP response status codes",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Microsoft REST API Guidelines",
+          "url": "https://github.com/microsoft/api-guidelines"
+        }
+      ],
+      "hands_on": "Design REST endpoints for a todo app: create todo, list todos, update todo, delete todo.",
+      "expected_outcome": "Explain resources, methods, status codes, request validation, and idempotency."
     },
     {
       "day": 3,
+      "phase": "Phase 1 — Backend Foundations",
       "topic": "WebSockets",
-      "category": "Realtime Communication"
+      "category": "Realtime Communication",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand when persistent bidirectional connections are useful.",
+      "official_docs": [
+        {
+          "title": "MDN — The WebSocket API",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "MDN — Writing WebSocket client applications",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications"
+        }
+      ],
+      "hands_on": "Build or run a tiny WebSocket echo server and connect to it from a browser client.",
+      "expected_outcome": "Explain the difference between HTTP request-response and persistent WebSocket communication."
     },
     {
       "day": 4,
-      "topic": "gRPC",
-      "category": "Service Communication"
+      "phase": "Phase 1 — Backend Foundations",
+      "topic": "gRPC Fundamentals",
+      "category": "Service Communication",
+      "difficulty": "Intermediate",
+      "learning_objective": "Understand RPC-style service communication and protocol buffers.",
+      "official_docs": [
+        {
+          "title": "gRPC — Introduction",
+          "url": "https://grpc.io/docs/what-is-grpc/introduction/"
+        },
+        {
+          "title": "gRPC — Core concepts, architecture and lifecycle",
+          "url": "https://grpc.io/docs/what-is-grpc/core-concepts/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "gRPC Documentation",
+          "url": "https://grpc.io/docs/"
+        }
+      ],
+      "hands_on": "Create a small proto file for a UserService with GetUser and CreateUser methods.",
+      "expected_outcome": "Explain service definitions, proto files, clients, servers, unary calls, and streaming."
     },
     {
       "day": 5,
-      "topic": "GraphQL",
-      "category": "APIs"
+      "phase": "Phase 1 — Backend Foundations",
+      "topic": "PostgreSQL Basics",
+      "category": "Databases",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand relational databases, tables, rows, columns, and SQL basics.",
+      "official_docs": [
+        {
+          "title": "PostgreSQL — Tutorial",
+          "url": "https://www.postgresql.org/docs/current/tutorial.html"
+        },
+        {
+          "title": "PostgreSQL — Getting Started",
+          "url": "https://www.postgresql.org/docs/current/tutorial-start.html"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "PostgreSQL Documentation",
+          "url": "https://www.postgresql.org/docs/"
+        }
+      ],
+      "hands_on": "Create a users table, insert records, query them, and update one row.",
+      "expected_outcome": "Explain tables, primary keys, SQL queries, and basic database operations."
     },
     {
       "day": 6,
-      "topic": "Databases",
-      "category": "Data Systems"
+      "phase": "Phase 1 — Backend Foundations",
+      "topic": "Indexes in Databases",
+      "category": "Databases",
+      "difficulty": "Intermediate",
+      "learning_objective": "Understand why indexes speed up reads but add write/storage overhead.",
+      "official_docs": [
+        {
+          "title": "PostgreSQL — Indexes",
+          "url": "https://www.postgresql.org/docs/current/indexes.html"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Use The Index, Luke",
+          "url": "https://use-the-index-luke.com/"
+        }
+      ],
+      "hands_on": "Create an index on a table and compare query plans before and after using EXPLAIN.",
+      "expected_outcome": "Explain why indexes help lookups and why too many indexes can hurt writes."
     },
     {
       "day": 7,
-      "topic": "Caching",
-      "category": "Performance Engineering"
+      "phase": "Phase 1 — Backend Foundations",
+      "topic": "Redis as a Cache",
+      "category": "Caching",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand how Redis is used to reduce database load and improve latency.",
+      "official_docs": [
+        {
+          "title": "Redis — Docs",
+          "url": "https://redis.io/docs/latest/"
+        },
+        {
+          "title": "Redis — Quick starts",
+          "url": "https://redis.io/docs/latest/develop/get-started/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Redis — Get started with Redis Open Source",
+          "url": "https://redis.io/docs/latest/get-started/"
+        }
+      ],
+      "hands_on": "Use Redis SET, GET, EXPIRE, and DEL commands from redis-cli.",
+      "expected_outcome": "Explain cache hits, cache misses, TTL, invalidation, and why caching is hard."
     },
     {
       "day": 8,
+      "phase": "Phase 1 — Backend Foundations",
       "topic": "Message Queues",
-      "category": "Distributed Systems"
+      "category": "Event-Driven Systems",
+      "difficulty": "Intermediate",
+      "learning_objective": "Understand how queues decouple producers and consumers.",
+      "official_docs": [
+        {
+          "title": "RabbitMQ — Tutorials",
+          "url": "https://www.rabbitmq.com/tutorials"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "CloudAMQP — RabbitMQ for beginners",
+          "url": "https://www.cloudamqp.com/blog/part1-rabbitmq-for-beginners-what-is-rabbitmq.html"
+        }
+      ],
+      "hands_on": "Write a simple producer that sends jobs and a consumer that processes them.",
+      "expected_outcome": "Explain producers, consumers, queues, retries, dead-letter queues, and backpressure."
     },
     {
       "day": 9,
-      "topic": "Docker",
-      "category": "Containers"
+      "phase": "Phase 1 — Backend Foundations",
+      "topic": "Authentication vs Authorization",
+      "category": "Security Basics",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand the difference between proving identity and checking permissions.",
+      "official_docs": [
+        {
+          "title": "OWASP — Authentication Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+        },
+        {
+          "title": "OWASP — Authorization Cheat Sheet",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Auth0 — Authentication vs Authorization",
+          "url": "https://auth0.com/docs/get-started/identity-fundamentals/authentication-and-authorization"
+        }
+      ],
+      "hands_on": "Design a simple permission matrix for admin, editor, and viewer roles.",
+      "expected_outcome": "Explain login, identity, sessions, tokens, roles, permissions, and least privilege."
     },
     {
       "day": 10,
-      "topic": "Kubernetes",
-      "category": "Platform Engineering"
+      "phase": "Phase 1 — Backend Foundations",
+      "topic": "API Rate Limiting",
+      "category": "API Reliability",
+      "difficulty": "Intermediate",
+      "learning_objective": "Understand how systems protect APIs from abuse and overload.",
+      "official_docs": [
+        {
+          "title": "NGINX — Rate limiting",
+          "url": "https://docs.nginx.com/nginx/admin-guide/security-controls/controlling-access-proxied-http/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Cloudflare — What is rate limiting?",
+          "url": "https://www.cloudflare.com/learning/bots/what-is-rate-limiting/"
+        }
+      ],
+      "hands_on": "Implement a simple in-memory token bucket rate limiter.",
+      "expected_outcome": "Explain fixed window, sliding window, token bucket, and why rate limits protect reliability."
     },
     {
       "day": 11,
-      "topic": "CI/CD",
-      "category": "Software Delivery"
+      "phase": "Phase 2 — Containers and Platform",
+      "topic": "Docker Fundamentals",
+      "category": "Containers",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand containers, images, Dockerfiles, and local development workflows.",
+      "official_docs": [
+        {
+          "title": "Docker Docs — Get started",
+          "url": "https://docs.docker.com/get-started/"
+        },
+        {
+          "title": "Docker Docs",
+          "url": "https://docs.docker.com/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Docker — Manuals",
+          "url": "https://docs.docker.com/manuals/"
+        }
+      ],
+      "hands_on": "Write a Dockerfile for a small Python or Node.js app and run it locally.",
+      "expected_outcome": "Explain image vs container, layers, ports, volumes, and environment variables."
     },
     {
       "day": 12,
-      "topic": "Observability",
-      "category": "Production Engineering"
+      "phase": "Phase 2 — Containers and Platform",
+      "topic": "Docker Compose",
+      "category": "Local Development",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand how to run multi-container applications locally.",
+      "official_docs": [
+        {
+          "title": "Docker Compose Documentation",
+          "url": "https://docs.docker.com/compose/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Docker Docs — Guides",
+          "url": "https://docs.docker.com/guides/"
+        }
+      ],
+      "hands_on": "Run an app and PostgreSQL using docker-compose.yml.",
+      "expected_outcome": "Explain services, networks, volumes, environment variables, and local app dependencies."
     },
     {
       "day": 13,
-      "topic": "System Design",
-      "category": "Architecture"
+      "phase": "Phase 2 — Containers and Platform",
+      "topic": "Kubernetes Basics",
+      "category": "Kubernetes",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand what Kubernetes does and why teams use it.",
+      "official_docs": [
+        {
+          "title": "Kubernetes — Concepts",
+          "url": "https://kubernetes.io/docs/concepts/"
+        },
+        {
+          "title": "Kubernetes — Learn Kubernetes Basics",
+          "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Kubernetes — Glossary",
+          "url": "https://kubernetes.io/docs/reference/glossary/"
+        }
+      ],
+      "hands_on": "Run a simple Deployment and expose it with a Service using minikube or kind.",
+      "expected_outcome": "Explain Pods, Deployments, Services, ReplicaSets, and basic cluster architecture."
     },
     {
       "day": 14,
-      "topic": "Platform Engineering",
-      "category": "Developer Infrastructure"
+      "phase": "Phase 2 — Containers and Platform",
+      "topic": "Kubernetes Pods and Deployments",
+      "category": "Kubernetes",
+      "difficulty": "Intermediate",
+      "learning_objective": "Understand how Kubernetes runs and manages application workloads.",
+      "official_docs": [
+        {
+          "title": "Kubernetes — Workloads",
+          "url": "https://kubernetes.io/docs/concepts/workloads/"
+        },
+        {
+          "title": "Kubernetes — Deployments",
+          "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Kubernetes — Pods",
+          "url": "https://kubernetes.io/docs/concepts/workloads/pods/"
+        }
+      ],
+      "hands_on": "Create a Deployment, scale replicas, update the image, and roll back.",
+      "expected_outcome": "Explain desired state, reconciliation, rolling updates, and self-healing."
+    },
+    {
+      "day": 15,
+      "phase": "Phase 2 — Containers and Platform",
+      "topic": "CI/CD Fundamentals",
+      "category": "Software Delivery",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand how teams automate build, test, and deployment workflows.",
+      "official_docs": [
+        {
+          "title": "GitHub Actions — Documentation",
+          "url": "https://docs.github.com/actions"
+        },
+        {
+          "title": "GitHub Actions — Events that trigger workflows",
+          "url": "https://docs.github.com/actions/using-workflows/events-that-trigger-workflows"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "GitHub Actions — Workflow syntax",
+          "url": "https://docs.github.com/actions/using-workflows/workflow-syntax-for-github-actions"
+        }
+      ],
+      "hands_on": "Create a GitHub Actions workflow that runs tests on every push.",
+      "expected_outcome": "Explain pipelines, jobs, steps, runners, artifacts, secrets, and deployment gates."
+    },
+    {
+      "day": 16,
+      "phase": "Phase 3 — Reliability and Observability",
+      "topic": "Observability Fundamentals",
+      "category": "Observability",
+      "difficulty": "Beginner",
+      "learning_objective": "Understand logs, metrics, traces, and why production systems need observability.",
+      "official_docs": [
+        {
+          "title": "OpenTelemetry — What is OpenTelemetry?",
+          "url": "https://opentelemetry.io/docs/what-is-opentelemetry/"
+        },
+        {
+          "title": "OpenTelemetry — Concepts",
+          "url": "https://opentelemetry.io/docs/concepts/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "OpenTelemetry Documentation",
+          "url": "https://opentelemetry.io/docs/"
+        }
+      ],
+      "hands_on": "Add structured logs to a small app and include request_id in every log line.",
+      "expected_outcome": "Explain logs, metrics, traces, spans, context propagation, and telemetry pipelines."
+    },
+    {
+      "day": 17,
+      "phase": "Phase 3 — Reliability and Observability",
+      "topic": "Distributed Tracing",
+      "category": "Observability",
+      "difficulty": "Intermediate",
+      "learning_objective": "Understand how traces follow a request across multiple services.",
+      "official_docs": [
+        {
+          "title": "OpenTelemetry — Traces",
+          "url": "https://opentelemetry.io/docs/concepts/signals/traces/"
+        },
+        {
+          "title": "OpenTelemetry — Context propagation",
+          "url": "https://opentelemetry.io/docs/concepts/context-propagation/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "OpenTelemetry — Observability primer",
+          "url": "https://opentelemetry.io/docs/concepts/observability-primer/"
+        }
+      ],
+      "hands_on": "Instrument two small services and pass a trace context between them.",
+      "expected_outcome": "Explain traces, spans, parent-child relationships, trace IDs, and context propagation."
+    },
+    {
+      "day": 18,
+      "phase": "Phase 3 — Reliability and Observability",
+      "topic": "Service Level Objectives",
+      "category": "Reliability",
+      "difficulty": "Intermediate",
+      "learning_objective": "Understand how teams define reliability targets using SLIs, SLOs, and error budgets.",
+      "official_docs": [
+        {
+          "title": "Google SRE Workbook — Implementing SLOs",
+          "url": "https://sre.google/workbook/implementing-slos/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Google SRE Book",
+          "url": "https://sre.google/sre-book/table-of-contents/"
+        }
+      ],
+      "hands_on": "Define one SLI and one SLO for an API endpoint.",
+      "expected_outcome": "Explain SLI, SLO, SLA, error budget, and why 100% reliability is usually not the goal."
+    },
+    {
+      "day": 19,
+      "phase": "Phase 4 — System Design and Production",
+      "topic": "Load Balancing",
+      "category": "System Design",
+      "difficulty": "Intermediate",
+      "learning_objective": "Understand how traffic is distributed across multiple backend instances.",
+      "official_docs": [
+        {
+          "title": "NGINX — HTTP Load Balancing",
+          "url": "https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "AWS — Elastic Load Balancing Documentation",
+          "url": "https://docs.aws.amazon.com/elasticloadbalancing/"
+        }
+      ],
+      "hands_on": "Run two backend containers and put NGINX in front of them as a load balancer.",
+      "expected_outcome": "Explain round-robin, health checks, reverse proxies, sticky sessions, and failure handling."
+    },
+    {
+      "day": 20,
+      "phase": "Phase 4 — System Design and Production",
+      "topic": "Incident Response Basics",
+      "category": "Production Engineering",
+      "difficulty": "Intermediate",
+      "learning_objective": "Understand how engineering teams respond to production issues.",
+      "official_docs": [
+        {
+          "title": "Google SRE Book — Managing Incidents",
+          "url": "https://sre.google/sre-book/managing-incidents/"
+        }
+      ],
+      "good_reads": [
+        {
+          "title": "Atlassian — Incident management",
+          "url": "https://www.atlassian.com/incident-management"
+        }
+      ],
+      "hands_on": "Write a mock incident timeline for an API outage.",
+      "expected_outcome": "Explain severity, incident commander, timeline, communication, mitigation, and postmortems."
     }
   ]
