@@ -1,0 +1,39 @@
+name: Daily Engineering Lesson
+
+on:
+  schedule:
+    - cron: "30 3 * * *" # 9:00 AM IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-lesson:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: Generate daily note
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-5.5
+        run: python scripts/generate_daily_note.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "daily-learning-bot"
+          git config user.email "daily-learning-bot@users.noreply.github.com"
+          git add daily/
+          git commit -m "Add daily engineering lesson" || echo "No changes to commit"
+          git push

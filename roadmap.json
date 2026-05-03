@@ -1,0 +1,72 @@
+[
+    {
+      "day": 1,
+      "topic": "HTTP",
+      "category": "Backend Fundamentals"
+    },
+    {
+      "day": 2,
+      "topic": "REST APIs",
+      "category": "APIs"
+    },
+    {
+      "day": 3,
+      "topic": "WebSockets",
+      "category": "Realtime Communication"
+    },
+    {
+      "day": 4,
+      "topic": "gRPC",
+      "category": "Service Communication"
+    },
+    {
+      "day": 5,
+      "topic": "GraphQL",
+      "category": "APIs"
+    },
+    {
+      "day": 6,
+      "topic": "Databases",
+      "category": "Data Systems"
+    },
+    {
+      "day": 7,
+      "topic": "Caching",
+      "category": "Performance Engineering"
+    },
+    {
+      "day": 8,
+      "topic": "Message Queues",
+      "category": "Distributed Systems"
+    },
+    {
+      "day": 9,
+      "topic": "Docker",
+      "category": "Containers"
+    },
+    {
+      "day": 10,
+      "topic": "Kubernetes",
+      "category": "Platform Engineering"
+    },
+    {
+      "day": 11,
+      "topic": "CI/CD",
+      "category": "Software Delivery"
+    },
+    {
+      "day": 12,
+      "topic": "Observability",
+      "category": "Production Engineering"
+    },
+    {
+      "day": 13,
+      "topic": "System Design",
+      "category": "Architecture"
+    },
+    {
+      "day": 14,
+      "topic": "Platform Engineering",
+      "category": "Developer Infrastructure"
+    }
+  ]
