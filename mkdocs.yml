@@ -1,7 +1,7 @@
 site_name: Engineering Learning
 site_description: Daily engineering learning notes generated with GitHub Actions and OpenAI
 site_author: Som
-repo_url: git clone https://github.com/Som23Git/engineering-learning
+repo_url: https://github.com/Som23Git/engineering-learning
 repo_name: Som23Git/engineering-learning
 
 theme:
