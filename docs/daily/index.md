@@ -10,3 +10,4 @@ This page is automatically updated by GitHub Actions.
 - [Day 004 — Grpc Fundamentals](2026-05-03-day-004-grpc-fundamentals.md)
 - [Day 005 — Postgresql Basics](2026-05-04-day-005-postgresql-basics.md)
 - [Day 006 — Indexes In Databases](2026-05-05-day-006-indexes-in-databases.md)
+- [Day 007 — Redis As A Cache](2026-05-06-day-007-redis-as-a-cache.md)
