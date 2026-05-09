@@ -13,3 +13,4 @@ This page is automatically updated by GitHub Actions.
 - [Day 007 — Redis As A Cache](2026-05-06-day-007-redis-as-a-cache.md)
 - [Day 008 — Message Queues](2026-05-07-day-008-message-queues.md)
 - [Day 009 — Authentication Vs Authorization](2026-05-08-day-009-authentication-vs-authorization.md)
+- [Day 010 — Api Rate Limiting](2026-05-09-day-010-api-rate-limiting.md)
