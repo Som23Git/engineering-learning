@@ -14,3 +14,4 @@ This page is automatically updated by GitHub Actions.
 - [Day 008 — Message Queues](2026-05-07-day-008-message-queues.md)
 - [Day 009 — Authentication Vs Authorization](2026-05-08-day-009-authentication-vs-authorization.md)
 - [Day 010 — Api Rate Limiting](2026-05-09-day-010-api-rate-limiting.md)
+- [Day 011 — Docker Fundamentals](2026-05-10-day-011-docker-fundamentals.md)
