@@ -16,3 +16,4 @@ This page is automatically updated by GitHub Actions.
 - [Day 010 — Api Rate Limiting](2026-05-09-day-010-api-rate-limiting.md)
 - [Day 011 — Docker Fundamentals](2026-05-10-day-011-docker-fundamentals.md)
 - [Day 012 — Docker Compose](2026-05-11-day-012-docker-compose.md)
+- [Day 013 — Kubernetes Basics](2026-05-12-day-013-kubernetes-basics.md)
