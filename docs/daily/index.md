@@ -18,3 +18,4 @@ This page is automatically updated by GitHub Actions.
 - [Day 012 — Docker Compose](2026-05-11-day-012-docker-compose.md)
 - [Day 013 — Kubernetes Basics](2026-05-12-day-013-kubernetes-basics.md)
 - [Day 014 — Kubernetes Pods And Deployments](2026-05-13-day-014-kubernetes-pods-and-deployments.md)
+- [Day 015 — Ci Cd Fundamentals](2026-05-14-day-015-ci-cd-fundamentals.md)
