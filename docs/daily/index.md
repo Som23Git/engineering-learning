@@ -20,3 +20,4 @@ This page is automatically updated by GitHub Actions.
 - [Day 014 — Kubernetes Pods And Deployments](2026-05-13-day-014-kubernetes-pods-and-deployments.md)
 - [Day 015 — Ci Cd Fundamentals](2026-05-14-day-015-ci-cd-fundamentals.md)
 - [Day 016 — Observability Fundamentals](2026-05-15-day-016-observability-fundamentals.md)
+- [Day 017 — Distributed Tracing](2026-05-16-day-017-distributed-tracing.md)
