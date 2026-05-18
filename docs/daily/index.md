@@ -22,3 +22,4 @@ This page is automatically updated by GitHub Actions.
 - [Day 016 — Observability Fundamentals](2026-05-15-day-016-observability-fundamentals.md)
 - [Day 017 — Distributed Tracing](2026-05-16-day-017-distributed-tracing.md)
 - [Day 018 — Service Level Objectives](2026-05-17-day-018-service-level-objectives.md)
+- [Day 019 — Load Balancing](2026-05-18-day-019-load-balancing.md)
